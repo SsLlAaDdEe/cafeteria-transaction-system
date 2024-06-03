@@ -20,7 +20,7 @@ const RegistrationForm = () => {
   });
 
   const onSubmit = (values, { setSubmitting, resetForm }) => {
-    axios.post('http://localhost:8000/api/register/', values)
+    axios.post('http://127.0.0.1:8000/api/register/', values)
       .then(response => {
         console.log('Registration successful', response);
         // Handle successful registration (e.g., show a success message)

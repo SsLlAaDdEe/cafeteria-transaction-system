@@ -15,7 +15,7 @@ const Profile = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/profile/', {
+    axios.get('http://127.0.0.1:8000/api/profile/', {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
@@ -42,7 +42,7 @@ const Profile = () => {
     e.preventDefault();
     setMessage('');
 
-    axios.put('http://localhost:8000/api/profile/', user, {
+    axios.put('http://127.0.0.1:8000/api/profile/', user, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
