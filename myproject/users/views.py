@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from .serializers import UserSerializer
+from .serializers import RegisterSerializer
 
 class UserRegistrationView(generics.CreateAPIView):
     serializer_class = UserSerializer
@@ -24,3 +25,7 @@ class UserProfileView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+class RegisterView(generics.CreateAPIView):
+    serializer_class = RegisterSerializer
